@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevClub Joken Pow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url("https://source.unsplash.com/1600x900/?landscape");
+            background-size: cover ;
+        }
+
+        .container{
+            background: #fff;
+            padding: 20px ;
+            border-radius: 10%;
+            text-align: center;
+        }
+
+        .container h1{
+            font-weight: 700;
+            margin-bottom: 18px;
+            font-size: 40px;
+        }
+
+        .container button{
+            margin: 0 7px 17px 7px;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .container button:hover{
+            opacity: 0.7;
+        }
+
+        .container #rock{
+            font-size: 30px;
+            border: none;
+            background: red;
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+        .container #paper{
+            font-size: 30px;
+            border: none;
+            background: blue;
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+        .container #scissors{
+            font-size: 30px;
+            border: none;
+            background: yellow;
+            padding: 6px;
+            border-radius: 10px;
+        }
+
+        .container p{
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 9px;
+        }
+
+        .container .your-score span{
+            color: red;
+        }
+
+        .container .machine-score span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JokenPô</h1>
+       
+          <button id="rock" onclick="playHuman(`rock`)">&#x1F44A;</button>
+          <button id="paper" onclick="playHuman(`paper`)">&#x1F91A;</button>
+          <button id="scissors" onclick="playHuman(`scissors`)">&#x270C;</button>
+
+        <p class="result"></p>
+
+        <p class="your-score">Sua pontuação: <span id="Score">0</span></p>  
+        <p class="machine-score">Pontuação da Alexa: <span id="ScoreMachine">0</span></p>  
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
